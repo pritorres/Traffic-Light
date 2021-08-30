@@ -15,7 +15,7 @@ const Home = () => {
 	};
 	return (
 		<>
-			<div className=" d-flex flex-column justify-content-center align-items-center">
+			<div className=" d-flex flex-column align-items-center">
 				<div className="soporte" />
 				<div className="container d-flex justify-content-center">
 					<div className="bg-dark p-2 rounded ">
