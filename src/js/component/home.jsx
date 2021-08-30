@@ -3,37 +3,44 @@ import "./style.css";
 
 //create your first component
 const Home = () => {
-	const [bombillaACtiva, setBombillasActivas] = useState();
-	const bottonA = () => {
-		setBombillasActivas("a");
+	const [bombillaACtiva, setBombillaActiva] = useState();
+	const bombillaA = () => {
+		setBombillaActiva("A");
 	};
-	const bottonB = () => {
-		setBombillasActivas("b");
+	const bombillaB = () => {
+		setBombillaActiva("B");
 	};
-	const bottonC = () => {
-		setBombillasActivas("c");
+	const bombillaC = () => {
+		setBombillaActiva("C");
 	};
-
 	return (
-		<div className="container">
-			<div className="bg-dark d-inline-flex flex-column p-2 rounded">
-				<div
-					onClick={bottonA}
-					className={`bg-danger rounded-circle p-3 ${
-						bombillaACtiva == "a" ? "active" : " "
-					}`}></div>
-				<div
-					onClick={bottonB}
-					className={`bg-warning rounded-circle p-3 ${
-						bombillaACtiva == "b" ? "active" : " "
-					}`}></div>
-				<div
-					onClick={bottonC}
-					className={`bg-success rounded-circle p-3 ${
-						bombillaACtiva == "c" ? "active" : " "
-					}`}></div>
+		<>
+			<div className=" d-flex flex-column justify-content-center align-items-center">
+				<div className="soporte" />
+				<div className="container d-flex justify-content-center">
+					<div className="bg-dark p-2 rounded ">
+						<div
+							onClick={bombillaA}
+							className={`bg-danger p-5 rounded-circle ${
+								bombillaACtiva == "A" ? "active" : " "
+							}`}
+						/>
+						<div
+							onClick={bombillaB}
+							className={`bg-warning p-5 rounded-circle ${
+								bombillaACtiva == "B" ? "active" : " "
+							}`}
+						/>
+						<div
+							onClick={bombillaC}
+							className={`bg-success p-5 rounded-circle ${
+								bombillaACtiva == "C" ? "active" : " "
+							}`}
+						/>
+					</div>
+				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 
